@@ -1,0 +1,8 @@
+c:\users\admin\documents\visual studio 2010\Projects\Yerbol\Yerbol\bin\Debug\Yerbol.exe
+c:\users\admin\documents\visual studio 2010\Projects\Yerbol\Yerbol\bin\Debug\Yerbol.pdb
+c:\users\admin\documents\visual studio 2010\Projects\Yerbol\Yerbol\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2010\Projects\Yerbol\Yerbol\obj\x86\Debug\Yerbol.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2010\Projects\Yerbol\Yerbol\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\admin\documents\visual studio 2010\Projects\Yerbol\Yerbol\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\admin\documents\visual studio 2010\Projects\Yerbol\Yerbol\obj\x86\Debug\Yerbol.exe
+c:\users\admin\documents\visual studio 2010\Projects\Yerbol\Yerbol\obj\x86\Debug\Yerbol.pdb
