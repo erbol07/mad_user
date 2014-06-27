@@ -1,0 +1,7 @@
+namespace Milkyway.BinaryCalculators
+{
+    public interface IBinaryCalculation
+    {
+        double Calculate(double firstArgument, double secondArgument);
+    }
+}
