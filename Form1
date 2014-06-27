@@ -1,0 +1,166 @@
+using System;
+using System.Windows.Forms;
+using Milkyway.BinaryCalculators;
+using Milkyway.MassSort;
+using Milkyway.UnaryCalculations;
+
+namespace Milkyway
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Summ_Click(object sender, EventArgs e)
+        {
+            Mars("Add");
+        }
+
+        private void Deduc_Click(object sender, EventArgs e)
+        {
+            Mars("Ded");
+        }
+
+        private void Div_Click(object sender, EventArgs e)
+        {
+            Mars("Sub");
+        }
+
+        private void Mult_Click(object sender, EventArgs e)
+        {
+            Mars("Mult");
+        }
+
+        private void Mars(string name)
+        {
+            try
+            {
+                double firstArgument = Convert.ToDouble(FirstArgumentField.Text);
+                double secondArgument = Convert.ToDouble(SecondArgumentField.Text);
+                IBinaryCalculation binaryCalculation = BinaryFactory.CreateOperation(name);
+                ThirdArgumentField.Text = binaryCalculation.Calculate(firstArgument, secondArgument).ToString();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void Venus(string name)
+        {
+            try
+            {
+                double firstArgument = Convert.ToDouble(FirstArgumentField.Text);
+                IOneCalculation firstCalculation = UnaryFactory.CreateOperation(name);
+                ThirdArgumentField.Text = firstCalculation.Calculate(firstArgument).ToString();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void sin_Click(object sender, EventArgs e)
+        {
+            Venus("Sin");
+        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                    
+        private void cos_Click(object sender, EventArgs e)
+        {
+            Venus("Cos");
+        }
+
+        private void tan_Click(object sender, EventArgs e)
+        {
+            Venus("Tan");
+        }
+
+        private void cotan_Click(object sender, EventArgs e)
+        {
+            Venus("Ctan");
+        }
+
+        private void sqrt_Click(object sender, EventArgs e)
+        {
+            Venus("Sqrt");
+        }
+
+        private void pow_Click(object sender, EventArgs e)
+        {
+            Mars("Pow");
+        }
+
+        private void pow2_Click(object sender, EventArgs e)
+        {
+            Venus("Powsqr");
+        }
+
+        private void log10_Click(object sender, EventArgs e)
+        {
+            Venus("log10");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Venus("Acos");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Venus("Asin");
+        }
+
+        private void Atan_Click(object sender, EventArgs e)
+        {
+            Venus("Atan");
+        }
+
+        private void ln_Click(object sender, EventArgs e)
+        {
+            Venus("ln");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Pluto("Bubble");
+        }
+
+        private void Pluto(string name)
+        {
+            try
+            {
+                string[] stringArray = FirstArgumentField.Text.Split(' ');
+                int[] array = new int[stringArray.Length];
+                for (int i = 0; i < stringArray.Length; i++)
+                {
+                    array[i] = Convert.ToInt32(stringArray[i]);
+                }
+                ISort sorter = FactorySort.CreateOperation(name);
+                int[] result = sorter.SortMass(array);
+                string stringResult = string.Empty;
+                foreach (int element in result)
+                {
+                    stringResult += element + " ";
+
+                }
+                ThirdArgumentField.Text = stringResult;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Pluto("Dwarf");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
