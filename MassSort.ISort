@@ -1,0 +1,7 @@
+namespace Milkyway.MassSort
+{
+    public interface ISort
+    {
+        int[] SortMass(int[] array);
+    }
+}
